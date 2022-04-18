@@ -1,0 +1,40 @@
+import prisma from '../../../lib/prisma';
+
+export const get = async () => {
+	// get the prisma data
+	const data = await prisma.users.findMany();
+
+	// we can shape the data however we want
+	// so our user doesn't have to pay the cost for it
+	const users = data.map((user) => {
+		return {
+			name: user.name
+		};
+	});
+
+	console.log('prisma data', users);
+
+	if (!users) {
+		return { status: 400 };
+	}
+
+	return {
+		headers: { 'Content-Type': 'application/json' },
+		status: 200,
+		body: { users }
+	};
+};
+
+//POST DATA via form
+export const post = async ({ request }) => {
+	const form = await request.formData();
+	const name = form.get('form-name');
+
+	//db generates id for us
+	await prisma.users.create({
+		data: {
+			name: name
+		}
+	});
+	return {};
+};
