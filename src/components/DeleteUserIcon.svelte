@@ -7,8 +7,8 @@
 <form action="/users?_method=delete" method="post">
 	<input type="hidden" name="id" value={user.id} />
 	<button aria-label="Remove tweet" title="Remove" type="submit">
-		<div class="circle">
-			<XCircle size={16} />
+		<div class="circle mt-1.5">
+			<XCircle size={14} />
 		</div>
 	</button>
 </form>
