@@ -40,7 +40,7 @@
 						<div class="sm:text-center">
 							<h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
 								Trying SvelteKit and Prisma <br />
-								<span class="tracking-wide mx-2">It works great! </span> 🥳 🎉
+								<span class="tracking-wide ">It works great! </span> 🥳 🎉
 							</h2>
 							<p class="mt-6 mx-auto max-w-2xl text-lg text-indigo-200">
 								Please enter your name below to create a new database entry.

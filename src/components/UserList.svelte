@@ -1,10 +1,15 @@
 <script>
 	export let users;
+	import { XCircle } from 'lucide-svelte';
+	import DeleteUserIcon from './DeleteUserIcon.svelte';
 </script>
 
-<ul class="flex flex-col my-2 w-full text-zinc-200">
+<ul class="flex flex-col my-4 w-full text-white mx-2">
 	{#each users as user}
-		<li>{user.name}</li>
+		<li class="flex flex-row gap-x-1  items-center">
+			{user.name}
+			<DeleteUserIcon {user} />
+		</li>
 	{:else}
 		<li>No Users yet</li>
 	{/each}

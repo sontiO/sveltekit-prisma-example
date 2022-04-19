@@ -8,7 +8,8 @@ export const get = async () => {
 	// so our user doesn't have to pay the cost for it
 	const users = data.map((user) => {
 		return {
-			name: user.name
+			name: user.name,
+			id: user.id
 		};
 	});
 
@@ -37,4 +38,17 @@ export const post = async ({ request }) => {
 		}
 	});
 	return {};
+};
+
+//DELETE DATA via form
+export const del = async ({ request }) => {
+	const form = await request.formData();
+	const id = form.get('id');
+
+	await prisma.users.delete({ where: { id: id } });
+
+	return {
+		status: 303,
+		headers: { location: '/users' }
+	};
 };
