@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
 	import { page } from '$app/stores';
-	import Transition from '../components/Transition.svelte';
+	import Transition from '$root/components/Transition.svelte';
 	console.log('tryna learn here', $page.url);
 </script>
 
