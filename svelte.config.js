@@ -9,6 +9,7 @@ const config = {
 			resolve: {
 				alias: {
 					$root: path.resolve('./src'),
+					$lib: path.resolve('./lib'),
 					$components: path.resolve('./src/components')
 				}
 			}

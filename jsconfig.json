@@ -3,6 +3,7 @@
 	"compilerOptions": {
 		"paths": {
 			"$root/*": ["src/*"],
+			"$lib/*": ["lib/*"],
 			"$root/components/*": ["src/components/*"]
 		}
 	}
