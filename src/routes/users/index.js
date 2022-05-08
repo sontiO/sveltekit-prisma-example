@@ -1,4 +1,4 @@
-import prisma from '../../../lib/prisma';
+import { prisma } from '@prisma/client';
 
 export const get = async () => {
 	// get the prisma data
