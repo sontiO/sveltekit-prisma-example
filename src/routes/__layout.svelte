@@ -41,7 +41,5 @@
 	</div>
 </nav>
 <main>
-	<Transition url={$page.url}>
-		<slot />
-	</Transition>
+	<slot />
 </main>
